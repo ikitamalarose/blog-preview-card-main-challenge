@@ -1,0 +1,167 @@
+/* design system */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* colors */
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+
+    /* text configuration */
+    --body-font: "Figtree";
+    ---body-font-weight: 500;
+    --body-font-size: 1rem;
+
+    --title-font: "Figtree";
+    --title-font-weight: 800;
+
+    --element-margin-top: 1.5rem;
+    --element-margin-bottom: 0.75rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--yellow);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    font-family: var(--body-font);
+    font-weight: var(---body-font-weight);
+    font-size: var(--body-font-size);
+}
+
+.card {
+    width: 24rem;
+    height: 32.625rem;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid var(--black);
+    border-radius: 1.25rem;
+    box-shadow: 5px 5px 1px 1px var(--black);
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    transition: box-shadow 0.3s ease-in-out;
+
+}
+
+.card-shadow:hover {
+    box-shadow: 10px 10px 1px 1px var(--black);
+    cursor: pointer;
+}
+
+
+
+.card__image {
+    width: 21rem;
+    height: 12.5rem;
+    border-radius: 0.625rem;
+}
+
+.card__button {
+    width: 5.125rem;
+    height: 1.813rem;
+    border-radius: 0.25rem;
+    background-color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--title-font-weight);
+    margin: var(--element-margin-top) 0 var(--element-margin-bottom) 0;
+    padding: 0.25rem 0.75rem;
+}
+
+.card__subtitle {
+    margin-bottom: var(--element-margin-bottom);
+}
+
+.card__title {
+    margin-bottom: var(--element-margin-bottom);
+    font-weight: var(--title-font-weight);
+}
+
+.card__title-color:hover {
+    color: var(--yellow);
+}
+
+.card__content {
+    color: var(--grey);
+    line-height: 1.7rem;
+}
+
+
+.card__profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: var(--element-margin-top) 0 var(--element-margin-top) 0;
+}
+
+.card__profileAvatar {
+    margin-right: 0.344rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.card__profileName {
+    font-size: var(--title-font-weight);
+}
+
+.attribution {
+    margin-top: var(--element-margin-top);
+    font-weight: var(--title-font-weight);
+}
+
+.attribution a {
+    color: var(--white);
+}
+
+.attribution__break {
+    display: none;
+}
+
+
+/* media query */
+@media (max-width: 375px) {
+
+    .card {
+        width: 20.438rem;
+        height: 31.313rem;
+        box-shadow: 5px 5px 1px 1px var(--black);
+        margin: auto;
+    }
+
+    .card__image {
+        width: 17.438rem;
+        height: 12.5rem;
+    }
+
+    .card__button {
+        width: 4.563rem;
+        height: 1.625rem;
+    }
+
+    .card__title {
+        font-size: 1.4rem;
+    }
+
+    .card__content {
+        line-height: 1.5rem;
+    }
+
+    .attribution {
+        margin-top: 2rem;
+        text-align: justify;
+    }
+
+    .attribution__break {
+        display: initial;
+    }
+
+}
